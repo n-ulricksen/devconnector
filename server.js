@@ -18,8 +18,7 @@ const dbLocal = 'mongodb://localhost/devconnector';
 // Connect to MongoDB
 mongoose.connect(dbLocal)   // Connect to local DB if running
   .then(() => console.log("Connected to local MongoDB"))
-  .catch(err => {
-    console.log(err);
+  .catch(() => {
     mongoose.connect(dbCloud)
       .then(() => console.log("Connected to MLab MongoDB"))
       .catch(err => console.log(err));
