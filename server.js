@@ -22,7 +22,7 @@ mongoose.connect(dbLocal)   // Connect to local DB if running
   .catch(() => {
     mongoose.connect(dbCloud)
       .then(() => console.log("Connected to MLab MongoDB"))
-      .catch(err => console.log(err));
+      .catch(err => console.log(w));
   });
 
 // Passport middleware
